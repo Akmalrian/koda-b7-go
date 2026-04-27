@@ -6,10 +6,10 @@ func main() {
 	square(5)
 }
 
-func square(angkaSquare int) {
-	fmt.Println("Hasil Segitiga Siku-Siku ", angkaSquare, " baris")
-	for ulang := 1; ulang <= angkaSquare; ulang++ {
-		for angka2 := 1; angka2 <= ulang; angka2++ {
+func square(num int) {
+	fmt.Println("Hasil Segitiga Siku-Siku ", num, " baris")
+	for i := 1; i <= num; i++ {
+		for j := 1; j <= i; j++ {
 			fmt.Print("* ")
 		}
 		fmt.Println("")
