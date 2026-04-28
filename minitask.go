@@ -7,6 +7,9 @@ import (
 	"github.com/akmalrian/koda7-go/internals/minitask2"
 	"github.com/akmalrian/koda7-go/internals/minitask3"
 	"github.com/akmalrian/koda7-go/internals/minitask4"
+	"github.com/akmalrian/koda7-go/internals/minitask6"
+	"github.com/akmalrian/koda7-go/internals/minitask7"
+	"github.com/akmalrian/koda7-go/internals/minitask8"
 )
 
 func main() {
@@ -18,6 +21,9 @@ func main() {
 		fmt.Println("2. Minitask 2")
 		fmt.Println("3. Minitask 3")
 		fmt.Println("4. Minitask 4")
+		fmt.Println("5. Minitask 6")
+		fmt.Println("6. Minitask 7")
+		fmt.Println("7. Minitask 8")
 		fmt.Println("0. Keluar")
 		fmt.Println()
 
@@ -87,6 +93,49 @@ func main() {
 				},
 			}
 			fmt.Println((akmal))
+		} else if choice == 5 {
+			minitask6.FilePath()
+		} else if choice == 6 {
+			akmal := minitask7.User{
+				Name:    "Akmal Oktarian",
+				Address: "akmal@gmail.com",
+				Phone:   "089603886150",
+			}
+			akmal.Print()
+			fmt.Println()
+			fmt.Println((akmal.Greet()))
+			fmt.Println()
+			fmt.Print("Masukkan Nama yang ingin diganti : ")
+			var name string
+			fmt.Scan(&name)
+			akmal.SetName(name)
+			fmt.Println((akmal.Greet()))
+		} else if choice == 7 {
+			var historyFiktif []int
+			var jml int
+
+			fmt.Print("Berapa banyak barang yang ingin dibayar? ")
+			fmt.Scan(&jml)
+
+			prices := make([]int, jml)
+			for i := 0; i < jml; i++ {
+				fmt.Printf("Masukkan harga barang ke-%d: ", i+1)
+				fmt.Scan(&prices[i])
+			}
+
+			bank := minitask8.Bank{}
+			online := minitask8.Online{}
+			fiktif := minitask8.Fiktif{History: &historyFiktif}
+
+			fmt.Println("\n--- Hasil Eksekusi ---")
+
+			minitask8.ProcessPayment(bank, prices)
+			minitask8.ProcessPayment(online, prices)
+
+			minitask8.ProcessPayment(fiktif, prices)
+
+			fmt.Println("\nData History Pembayaran Fiktif:")
+			fmt.Println(historyFiktif)
 		} else if choice == 0 {
 			i = false
 			fmt.Println("Telah Keluar")
