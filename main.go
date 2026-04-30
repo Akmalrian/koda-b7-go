@@ -3,6 +3,7 @@
 // import (
 // 	"fmt"
 // 	"os"
+// 	"sync"
 // 	"time"
 
 // 	"github.com/akmalrian/koda7-go/models"
@@ -10,6 +11,19 @@
 // )
 
 // func main() {
+// 	var wg sync.WaitGroup
+// 	wg.Add(1)
+// 	// wg.Done()
+// 	// wg.Wait()
+// 	func(wg *sync.WaitGroup) {
+// 		time.Sleep(10 * time.Millisecond)
+// 		go fmt.Println("halo goroutine")
+// 		wg.Done()
+// 	}()
+// 	// func() {
+// 	// 	time.Sleep(10 * time.Millisecond)
+// 	// 	go fmt.Println("halo goroutine")
+// 	// }()
 // 	fmt.Println("Selamat Datang")
 // 	defer func() {
 // 		fmt.Println("Sampai Jumpa 1")

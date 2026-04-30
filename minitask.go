@@ -4,12 +4,16 @@ import (
 	"fmt"
 
 	"github.com/akmalrian/koda7-go/internals/minitask1"
+	"github.com/akmalrian/koda7-go/internals/minitask10"
+	"github.com/akmalrian/koda7-go/internals/minitask11"
+	"github.com/akmalrian/koda7-go/internals/minitask12"
 	"github.com/akmalrian/koda7-go/internals/minitask2"
 	"github.com/akmalrian/koda7-go/internals/minitask3"
 	"github.com/akmalrian/koda7-go/internals/minitask4"
 	"github.com/akmalrian/koda7-go/internals/minitask6"
 	"github.com/akmalrian/koda7-go/internals/minitask7"
 	"github.com/akmalrian/koda7-go/internals/minitask8"
+	"github.com/akmalrian/koda7-go/internals/minitask9"
 )
 
 func main() {
@@ -24,6 +28,10 @@ func main() {
 		fmt.Println("5. Minitask 6")
 		fmt.Println("6. Minitask 7")
 		fmt.Println("7. Minitask 8")
+		fmt.Println("8. Minitask 9")
+		fmt.Println("9. Minitask 10")
+		fmt.Println("10. Minitask 11")
+		fmt.Println("11. Minitask 12")
 		fmt.Println("0. Keluar")
 		fmt.Println()
 
@@ -136,6 +144,27 @@ func main() {
 
 			fmt.Println("\nData History Pembayaran Fiktif:")
 			fmt.Println(historyFiktif)
+		} else if choice == 8 {
+			minitask9.Coffee()
+			// var wg sync.WaitGroup
+
+			// for i := 1; i <= 3; i++ {
+			// 	var menu string
+			// 	fmt.Scan(&menu)
+			// 	go minitask9.Coffee(&wg, menu, i)
+			// }
+			// wg.Done()
+
+			// wg.Go(minitask9.Coffee)
+			// wg.Go(func(){
+			// })
+		} else if choice == 9 {
+			minitask10.Aktivitas()
+
+		} else if choice == 10 {
+			minitask11.Message()
+		} else if choice == 11 {
+			minitask12.Data()
 		} else if choice == 0 {
 			i = false
 			fmt.Println("Telah Keluar")
